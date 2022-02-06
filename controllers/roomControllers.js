@@ -6,6 +6,7 @@ const allRooms = async (req, res) => {
 
     res.status(200).json({
       success: true,
+      count: rooms.length,
       rooms,
     })
   } catch (error) {
