@@ -20,5 +20,8 @@ module.exports = {
     SMTP_FROM_NAME: '',
 
     NEXTAUTH_URL: '',
-  }
+  },
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
 }
