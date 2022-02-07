@@ -12,13 +12,14 @@ export const getRooms = req => async dispatch => {
   try {
     const { origin } = absoluteUrl(req)
 
-    const { data } =
-      (await axios.get(`${origin}/api/rooms`)) <
-      dispatch({
-        type: ALL_ROOMS_SUCCESS,
-        payload: data,
-      })
+    const { data } = await axios.get(`${origin}/api/rooms`)
+    dispatch({
+      type: ALL_ROOMS_SUCCESS,
+      payload: data,
+    })
   } catch (error) {
+    console.log('error')
+    console.log(error)
     dispatch({
       type: ALL_ROOMS_FAIL,
       payload: error.response.data.message,
