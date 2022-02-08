@@ -7,6 +7,7 @@ import Pagination from 'react-js-pagination'
 import { clearErrors } from '../redux/actions/roomActions'
 
 import RoomItem from './room/RoomItem'
+import Link from 'next/link'
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -46,12 +47,15 @@ const Home = () => {
   return (
     <>
       <section id='rooms' className='container mt-5'>
-        <h2 className='mb-3 ml-2 stays-heading'>Stays in New York</h2>
+        <h2 className='mb-3 ml-2 stays-heading'>
+          {location ? `Rooms in ${location}` : 'All Rooms'}
+        </h2>
 
-        <a href='#' className='ml-2 back-to-search'>
-          {' '}
-          <i className='fa fa-arrow-left'></i> Back to Search
-        </a>
+        <Link href='/search'>
+          <a className='ml-2 back-to-search'>
+            <i className='fa fa-arrow-left'></i> Back to Search
+          </a>
+        </Link>
         <div className='row'>
           {rooms && rooms.length === 0 ? (
             <div className='alert alert-danger mt-5 w-100'>
