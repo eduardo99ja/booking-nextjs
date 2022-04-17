@@ -18,6 +18,7 @@ const reducer = (state, action) => {
       ...state,
       ...action.payload,
     }
+    if (state.auth) nextState.auth = state.auth; // preserve auth value on client side navigation
     return nextState
   } else {
     return reducers(state, action)
