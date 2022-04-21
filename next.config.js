@@ -12,12 +12,12 @@ module.exports = {
     CLOUDINARY_API_KEY: '856255745964269',
     CLOUDINARY_API_SECRET: 'kyP8pUBMm_49q8HhNpQUSkR38Fg',
 
-    SMTP_HOST: '',
-    SMTP_PORT: '',
-    SMTP_USER: '',
-    SMTP_PASSWORD: '',
-    SMTP_FROM_EMAIL: '',
-    SMTP_FROM_NAME: '',
+    SMTP_HOST: 'smtp.mailtrap.io',
+    SMTP_PORT: '2525',
+    SMTP_USER: '08f4273ad6727b',
+    SMTP_PASSWORD: 'dd190619f58bc2',
+    SMTP_FROM_EMAIL: 'BookIt',
+    SMTP_FROM_NAME: 'noreply@bookit.com',
 
     NEXTAUTH_URL: '',
   },
